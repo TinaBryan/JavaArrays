@@ -1,8 +1,19 @@
-int[][] scoreCards = {
-  // Ben's
-{1, 2, 4, 2, 6, 5, 4, 3, 3, 2, 5, 7, 2, 7, 8, 4, 3, 2},
-// Alena's
-{2, 3, 5, 1, 1, 2, 3, 1, 1, 2, 4, 1, 3, 3, 2, 6, 3, 2},
-// Pasan's
-{4, 4, 2, 1, 2, 2, 1, 4, 2, 2, 2, 3, 2, 5, 8, 1, 2, 2}
+
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Random;
+
+String[] friends = {
+  "Treasure",
+  "Ben", 
+  "Alena", 
+  "Pasan", 
+  "Craig"
 };
+
+public String pickLunchSpot(String... spots) {
+  System.out.printf("Randomly picking %d lunch spots. %n",
+                    spots.length);
+  Random random = new Random();
+  return spots[random.nextInt(spots.length)];
+}
